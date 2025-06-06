@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "64a64028-91a7-4c38-8542-b7497d53b111",
+		"name": "Backend Car",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9354466",
+		"_collection_link": "https://gold-robot-5748.postman.co/workspace/APIS-BA~31811cc1-5897-4212-bdca-013cfc8144df/collection/9354466-64a64028-91a7-4c38-8542-b7497d53b111?action=share&source=collection_link&creator=9354466"
+	},
+	"item": [
+		{
+			"name": "porducts",
+			"item": [
+				{
+					"name": "Get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/products/get-all-products",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"products",
+								"get-all-products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a product",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add a new product",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update a product",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "carts",
+			"item": [
+				{
+					"name": "Get all carts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/carts/get-all-carts",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"carts",
+								"get-all-carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/carts/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"carts",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single cart for user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/carts/user/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"carts",
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a cart",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add a new cart",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update a cart",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "Get all orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get orders by cardID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/orders/create-order-carts-by-id/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"orders",
+								"create-order-carts-by-id",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a order",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add a new order",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update a orders",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "Get all Payment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single payment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get payment by orderId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/orders/create-order-carts-by-id/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"orders",
+								"create-order-carts-by-id",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a payment",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "save Payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8086/payment/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"payment",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a orders",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

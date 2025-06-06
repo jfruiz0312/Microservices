@@ -1,0 +1,5 @@
+customer=8082
+product=8083
+orders=8084
+payment=8086
+cart=8087
