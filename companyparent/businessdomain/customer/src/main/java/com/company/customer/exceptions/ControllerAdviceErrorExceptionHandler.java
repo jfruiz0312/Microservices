@@ -37,7 +37,7 @@ public class ControllerAdviceErrorExceptionHandler {
                 .stream()
                 .map(e -> new ErrorDetail(e.getField(), e.getDefaultMessage()))
                 .toList();
-        return new ResponseEntity<>(new Error("Error de validación de datos...", details), BAD_REQUEST);
+        return new ResponseEntity<>(new Error("Data validation error...", details), BAD_REQUEST);
     }
 
     @ExceptionHandler(DataIntegrityViolationException.class)
@@ -45,6 +45,6 @@ public class ControllerAdviceErrorExceptionHandler {
         List<ErrorDetail> details = new ArrayList<>();
         details.add(new ErrorDetail("", ex.toString()));
 
-        return new ResponseEntity<>(new Error("Error de violación de integridad de datos", details), BAD_REQUEST);
+        return new ResponseEntity<>(new Error("Data integrity violation error...", details), BAD_REQUEST);
     }
 }
