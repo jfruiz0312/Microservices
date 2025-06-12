@@ -16,12 +16,12 @@
     <description>Demo project for Spring Boot</description>
 	
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-circuitbreaker-resilience4j -->
+<!--         https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-circuitbreaker-resilience4j 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
             <version>3.2.0</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
 
     <build>

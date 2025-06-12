@@ -5,6 +5,7 @@ import com.company.carts.dto.CartsRequestDTO;
 import com.company.carts.dto.CartsResponseDTO;
 import com.company.carts.mapper.CartsMapper;
 import com.company.carts.service.FakeStoreService;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,6 +21,7 @@ import reactor.core.publisher.Mono;
 @Slf4j
 @RestController
 @RequestMapping("/carts")
+@Valid
 public class CartsRestController {
 
     private final FakeStoreService fakeStoreService;
@@ -41,7 +43,7 @@ public class CartsRestController {
     }
 
     @PostMapping
-    public Mono<ResponseEntity<CartsResponseDTO>> createCart(@RequestBody CartsRequestDTO cartRequest) {
+    public Mono<ResponseEntity<CartsResponseDTO>> createCart(@Valid @RequestBody CartsRequestDTO cartRequest) {
         log.info("Creating new cart for user: {}", cartRequest.getUserId());
         return fakeStoreService.createCart(cartsMapper.cartRequestToFakeStore(cartRequest))
                 .map(cartsMapper::fakeStoreToCartResponse)

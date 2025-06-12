@@ -39,7 +39,7 @@ public class Payment {
     private Long orderId;
 
     @Column(nullable = false)
-    private BigDecimal amount;
+    private Double amount;
 
     @Column(nullable = false)
     private String currency;

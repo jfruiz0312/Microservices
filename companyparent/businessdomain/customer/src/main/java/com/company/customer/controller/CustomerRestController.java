@@ -2,12 +2,14 @@ package com.company.customer.controller;
 
 import com.company.customer.entities.Customer;
 import com.company.customer.repository.CustomerRepository;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -66,8 +68,8 @@ public class CustomerRestController {
         }
     }
 
-    @PostMapping
-    public ResponseEntity<?> post(@RequestBody Customer customer) {
+    @PostMapping(path = "/add", consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<?> post(@Valid @RequestBody Customer customer) {
         customer.setId(null);
         Customer save = customerRepository.save(customer);
         return new ResponseEntity<>(save, HttpStatus.CREATED);

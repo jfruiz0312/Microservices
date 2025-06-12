@@ -15,8 +15,6 @@
     <name>customer</name>
     <description>Demo project for Spring Boot</description>
 	
-
-
     <build>
         <plugins>
             <plugin>
